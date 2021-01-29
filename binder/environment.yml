@@ -1,12 +1,11 @@
 channels:
 - conda-forge
 dependencies:
-- pyiron
-- lammps
-- sqsgenerator
-- damask=3.0.0=py37hb0e919f_2
-- vtk
-- itkwidgets
-- pyvista
-- h5py
-- seaborn
+- pyiron=0.4.0
+- lammps=2020.12.24=py37h78dfc3e_openmpi_2
+- sqsgenerator=0.0.5
+- damask=3.0.0=py37h9964bdb_8
+- vtk=9.0.1
+- itkwidgets=0.32.0
+- pyvista=0.27.4
+- h5py=3.1.0
