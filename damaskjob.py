@@ -20,7 +20,7 @@ class DAMASKjob(GenericJob):
         self.input['grid'] = np.array([16,16,16])
         self.input['size'] = np.array([1.0,1.0,1.0])
         self.input['grains'] = 20
-        self.executable = "DAMASK_grid -l tensionX.load -g damask.geom"
+        self.executable = "DAMASK_grid -l tensionX.load -g damask.vtr"
         self._material = None 
         self._tension = None 
         
@@ -47,7 +47,7 @@ class DAMASKjob(GenericJob):
             f.writelines(self._tension)
         seed = seeds.from_random(self.input['size'], self.input['grains'])
         new_geom = Grid.from_Voronoi_tessellation(self.input['grid'], self.input['size'], seed)
-        new_geom.save_ASCII(os.path.join(self.working_directory, "damask.geom"))
+        # new_geom.save_ASCII(os.path.join(self.working_directory, "damask.geom"))
         new_geom.save(os.path.join(self.working_directory, "damask"))
         C_matrix = [self.input['C11']*1e9, self.input['C12']*1e9, self.input['C44']*1e9]
         elasticity={}
