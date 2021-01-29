@@ -9,3 +9,4 @@ dependencies:
 - itkwidgets=0.32.0
 - pyvista=0.27.4
 - h5py=3.1.0
+- nglview=2.7.7
