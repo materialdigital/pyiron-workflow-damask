@@ -527,7 +527,7 @@ class ElasticMatrixJob(AtomisticParallelMaster):
         self.structure_dict = OrderedDict()
         self.property_calculator = None
         self.hdf_storage_group = "elasticmatrix"
-        self._job_generator = ElasticJobGenerator(job=self)
+        self._job_generator = ElasticJobGenerator(master=self)
 
     def create_calculator(self):
         if self.property_calculator is None:

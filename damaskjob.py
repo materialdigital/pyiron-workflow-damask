@@ -2,7 +2,7 @@ from pyiron_base import Project, GenericJob, GenericParameters
 import numpy as np
 import matplotlib.pyplot as plt
 from damask import Config
-from damask import Geom
+from damask import Grid
 from damask import Result
 from damask import seeds
 import h5py
@@ -46,7 +46,7 @@ class DAMASKjob(GenericJob):
         with open(os.path.join(self.working_directory, 'tensionX.load'), "w") as f:
             f.writelines(self._tension)
         seed = seeds.from_random(self.input['size'], self.input['grains'])
-        new_geom = Geom.from_Voronoi_tessellation(self.input['grid'], self.input['size'], seed)
+        new_geom = Grid.from_Voronoi_tessellation(self.input['grid'], self.input['size'], seed)
         new_geom.save_ASCII(os.path.join(self.working_directory, "damask.geom"))
         new_geom.save(os.path.join(self.working_directory, "damask"))
         C_matrix = [self.input['C11']*1e9, self.input['C12']*1e9, self.input['C44']*1e9]
