@@ -2,7 +2,7 @@ channels:
 - conda-forge
 dependencies:
 - pyiron=0.4.0
-- lammps=2020.12.24=py37h78dfc3e_openmpi_2
+- lammps=2020.12.24
 - sqsgenerator=0.0.5
 - damask=3.0.0=py37h9964bdb_8
 - vtk=9.0.1
