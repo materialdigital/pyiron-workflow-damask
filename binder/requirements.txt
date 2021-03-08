@@ -1,4 +1,4 @@
-pyiron_atomistics==0.2.4
+pyiron_atomistics==0.2.6
 pyiron_gpl==0.0.2
 damask==3.0.0
 vtk==9.0.1
