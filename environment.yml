@@ -8,7 +8,7 @@ dependencies:
 - sqsgenerator=0.0.5
 - damask=3.0.0
 - vtk=9.0.1
-- itkwidgets=0.32.0
+- itkwidgets=0.32.1
 - pyvista=0.30.0
 - h5py=3.2.1
 - nglview=3.0.1
